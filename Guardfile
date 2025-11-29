@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
-ignore %r{tmp/*}
+File.read('.gitignore').split("\n").each do |path|
+  ignore %r{#{path}/*}
+end
 
 CONFIG_PATH = 'nix/pure/guard/config'
 
