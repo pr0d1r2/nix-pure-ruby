@@ -3,3 +3,4 @@
 :all_on_start: true
 :all_after_pass: true
 :halt_on_fail: true
+:results_file: '/tmp/.nix-pure-ruby-guard_rspec_results'
