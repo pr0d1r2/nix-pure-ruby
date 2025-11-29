@@ -2,6 +2,12 @@
 
 Drop-in pure nix shell to be placed in Ruby (and Rails) projects.
 
+## Installation
+
+Drop `nix/` folder to your Rails project.
+Adjust contents to have required ruby version and Gemfiles to contain
+needed gems.
+
 ## Usage
 
 Usable via set of encapsulated nix [sub] shells:
