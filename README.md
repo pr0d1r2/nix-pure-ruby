@@ -14,6 +14,15 @@ Run:
 nix/pure/rubocop/run.nixsh
 ```
 
+
+### RSpec
+
+Run:
+
+```zsh
+nix/pure/rspec/run.nixsh
+```
+
 ## Updating
 
 Updateable via set of encapsulated nix [sub] shells:
@@ -32,4 +41,12 @@ Modify `nix/pure/rubocop/Gemfile` and run:
 
 ```zsh
 nix/pure/rubocop/update.nixsh
+```
+
+### RSpec bundle
+
+Modify `nix/pure/rspec/Gemfile` and run:
+
+```zsh
+nix/pure/rspec/update.nixsh
 ```

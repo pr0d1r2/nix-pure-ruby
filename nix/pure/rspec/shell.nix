@@ -6,13 +6,17 @@ let
   bundler = import ../../bundler.nix {};
   bundix = import ../../bundix.nix {};
 
+  rubyEnv = pkgs.bundlerEnv.override { inherit bundler; } {
+    name = "nix-pure-rubocop-gems";
+    inherit ruby;
+    gemdir = ./.;
+  };
+
   shellDeps = [
     bundix
-    bundler
-    pkgs.cacert
-    pkgs.curl
-    pkgs.openssl
-    ruby
+    pkgs.bash
+    rubyEnv
+    rubyEnv.wrappedRuby
   ];
 in
 
@@ -20,6 +24,6 @@ pkgs.mkShell {
   buildInputs = shellDeps;
 
   shellHook = ''
-    echo
+    bundle install --quiet
   '';
 }

@@ -1,0 +1,4 @@
+#!/usr/bin/env nix-shell
+#!nix-shell ./shell.nix --pure --no-build-output --timeout 30 --cores 0 --quiet -i bash
+
+rspec $@
