@@ -31,8 +31,3 @@ Style/FrozenStringLiteralComment:
   Exclude:
     - '**/*.arb'
     - 'spec/spec_helper.rb'
-
-# Offense count: 1
-Style/InlineComment:
-  Exclude:
-    - 'spec/spec_helper.rb'
