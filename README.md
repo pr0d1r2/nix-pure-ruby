@@ -12,20 +12,23 @@ needed gems.
 
 Usable via set of encapsulated nix [sub] shells:
 
+### Guard
+
+Runs RuboCop and RSpec automatically.
+In other words - we have reactive TDD loop.
+
+Run:
+
+```zsh
+nix/pure/guard/run.nixsh
+```
+
 ### RuboCop
 
 Run:
 
 ```zsh
 nix/pure/rubocop/run.nixsh
-```
-
-### Guard
-
-Run:
-
-```zsh
-nix/pure/guard/run.nixsh
 ```
 
 ### RSpec
