@@ -18,6 +18,12 @@ Usable via set of encapsulated nix [sub] shells:
 
 ### Guard
 
+Run (aliased from bin/):
+
+```zsh
+guard
+```
+
 Runs RuboCop and RSpec automatically.
 In other words - we have reactive TDD loop.
 
@@ -29,7 +35,13 @@ nix/pure/guard/run.nixsh
 
 ### RuboCop
 
-Run:
+Run (aliased from bin/):
+
+```zsh
+rubocop
+```
+
+Runs:
 
 ```zsh
 nix/pure/rubocop/run.nixsh
@@ -37,7 +49,13 @@ nix/pure/rubocop/run.nixsh
 
 ### RSpec
 
-Run:
+Run (aliased from bin/):
+
+```zsh
+rspec
+```
+
+Runs:
 
 ```zsh
 nix/pure/rspec/run.nixsh
