@@ -2,20 +2,10 @@
 # keep-sorted start
 RSpec/DescribeClass:
   Exclude:
-    - spec/nix/shell_spec.rb
-    - spec/standards/implementation/methods_sorted_spec.rb
-    - spec/standards/rspec/coverage_spec.rb
-    - spec/underlay/**/*_spec.rb
-    - spec/rspec/**/*_spec.rb
-    - spec/justfile_spec.rb
-    - spec/**/*.just_spec.rb
-    - spec/standards/just/*_spec.rb
-    - spec/gen/*_spec.rb
-    - spec/robot/*_spec.rb
+    - 'spec/nix/pure/*/*.nixsh_spec.rb'
+    - 'spec/standards/rspec/coverage_spec.rb'
 RSpec/MultipleMemoizedHelpers:
   Exclude:
-    - spec/nix/shell_spec.rb
-    - spec/standards/implementation/methods_sorted_spec.rb
     - spec/standards/rspec/coverage_spec.rb
 RSpec/NestedGroups:
   Exclude:
