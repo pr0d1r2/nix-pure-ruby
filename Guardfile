@@ -6,6 +6,7 @@ end
 
 CONFIG_PATH = "#{__dir__}/nix/pure/guard/config".freeze
 
+# TODO: https://github.com/pr0d1r2/nix-pure-ruby/issues/2
 watch("#{CONFIG_PATH}/*.yml") do
   UI.info "Exiting guard because #{CONFIG_PATH}/ changed"
   exit 0
