@@ -1,0 +1,21 @@
+---
+# keep-sorted start
+Layout/SpaceInsideHashLiteralBraces:
+  EnforcedStyle: no_space
+Style/ArrayFirstLast:
+  Exclude:
+    - Guardfile
+Style/HashSyntax:
+  EnforcedStyle: no_mixed_keys
+  EnforcedShorthandSyntax: always
+Style/RegexpLiteral:
+  EnforcedStyle: percent_r
+Style/StringLiterals:
+  EnforcedStyle: single_quotes
+Style/TrailingCommaInArguments:
+  EnforcedStyleForMultiline: consistent_comma
+Style/TrailingCommaInArrayLiteral:
+  EnforcedStyleForMultiline: consistent_comma
+Style/TrailingCommaInHashLiteral:
+  EnforcedStyleForMultiline: consistent_comma
+# keep-sorted end

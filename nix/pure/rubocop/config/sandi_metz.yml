@@ -1,0 +1,37 @@
+# keep-sorted start
+
+---
+Metrics/BlockLength:
+  AllowedMethods:
+    - context
+    - describe
+    - it
+    - shared_examples
+    - guard
+    - group
+    - included
+  CountComments: false
+  Max: 5
+Metrics/ClassLength:
+  CountComments: false
+  Description: 'Avoid classes longer than 100 lines of code.'
+  Enabled: true
+  Max: 100
+Metrics/MethodLength:
+  CountComments: false
+  Description: 'Avoid methods longer than 5 lines of code.'
+  Enabled: true
+  Max: 5
+  StyleGuide: '<https://github.com/bbatsov/ruby-style-guide#short-methods>'
+Metrics/ModuleLength:
+  CountComments: false
+  Description: 'Avoid modules longer than 100 lines of code.'
+  Enabled: true
+  Max: 100
+Metrics/ParameterLists:
+  CountKeywordArgs: true
+  Description: 'Pass no more than four parameters into a method.'
+  Enabled: true
+  Max: 4
+  MaxOptionalParameters: 0
+# keep-sorted end
