@@ -2,6 +2,10 @@
 
 Drop-in pure nix shell to be placed in Ruby (and Rails) projects.
 
+This repo extrapolates idea of pure nix shell into multi-level
+encapsulated and modularized environments that loads mostly what is
+necessary instead of always loading everything.
+
 ## Installation
 
 Drop `nix/` folder and `Guardfile` to your Ruby [and Rails] project.
