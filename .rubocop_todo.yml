@@ -10,9 +10,3 @@
 # Configuration parameters: AllowSubject.
 RSpec/MultipleMemoizedHelpers:
   Max: 11
-
-# Offense count: 1
-# This cop supports safe autocorrection (--autocorrect).
-Style/BlockComments:
-  Exclude:
-    - 'spec/spec_helper.rb'
