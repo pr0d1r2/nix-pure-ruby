@@ -2,13 +2,20 @@
 
 ignore %r{tmp/*}
 
+CONFIG_PATH = 'nix/pure/guard/config'
+
+watch("#{CONFIG_PATH}/*.yml") do
+  UI.info "Exiting guard because #{CONFIG_PATH}/ changed"
+  exit 0
+end
+
 group :fast_fail, halt_on_fail: true do
-  guard :rubocop, YAML.load_file('nix/pure/guard/config/rubocop.yml') do
+  guard :rubocop, YAML.load_file("#{CONFIG_PATH}/rubocop.yml") do
     watch(%r{.+\.rb$})
     watch(%r{(?:.+/)?\.rubocop(?:_todo)?\.yml$}) { File.dirname(it[0]) }
   end
 
-  guard :rspec, YAML.load_file('nix/pure/guard/config/rspec.yml') do
+  guard :rspec, YAML.load_file("#{CONFIG_PATH}/rspec.yml") do
     require 'guard/rspec/dsl'
     dsl = Guard::RSpec::Dsl.new(self)
 
