@@ -6,4 +6,6 @@ Metrics/AbcSize:
   Max: 4.24
 Metrics/PerceivedComplexity:
   Max: 2
+RSpec/MultipleMemoizedHelpers:
+  Max: 11
 # keep-sorted end
