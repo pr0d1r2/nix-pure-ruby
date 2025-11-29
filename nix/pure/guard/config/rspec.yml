@@ -1,0 +1,5 @@
+---
+:cmd: 'nix/pure/rspec/run.nixsh'
+:all_on_start: true
+:all_after_pass: true
+:halt_on_fail: true

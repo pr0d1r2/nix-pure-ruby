@@ -1,0 +1,5 @@
+---
+:cmd: 'nix/pure/rubocop/run.nixsh'
+:all_on_start: true
+:halt_on_fail: true
+:results_file: '/tmp/.nix-pure-ruby-guard_rspec_results'

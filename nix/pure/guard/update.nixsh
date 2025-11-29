@@ -1,0 +1,13 @@
+#!/usr/bin/env nix-shell
+#!nix-shell ../bundle/shell.nix -i bash
+
+set -euox pipefail
+
+cd "$(dirname "$0")"
+
+bundle lock --add-platform ruby
+bundler package --no-install --path vendor
+bundix -l
+
+rm -rf vendor
+rm -rf .bundle

@@ -4,7 +4,7 @@ Drop-in pure nix shell to be placed in Ruby (and Rails) projects.
 
 ## Installation
 
-Drop `nix/` folder to your Rails project.
+Drop `nix/` folder and `Guardfile` to your Ruby [and Rails] project.
 Adjust contents to have required ruby version and Gemfiles to contain
 needed gems.
 
@@ -18,6 +18,14 @@ Run:
 
 ```zsh
 nix/pure/rubocop/run.nixsh
+```
+
+### Guard
+
+Run:
+
+```zsh
+nix/pure/guard/run.nixsh
 ```
 
 ### RSpec
@@ -38,6 +46,14 @@ Modify `nix/sources.json` and run:
 
 ```zsh
 nix/sources.update.nixsh
+```
+
+### Guard bundle
+
+Modify `nix/pure/guard/Gemfile` and run:
+
+```zsh
+nix/pure/guard/update.nixsh
 ```
 
 ### RuboCop bundle
