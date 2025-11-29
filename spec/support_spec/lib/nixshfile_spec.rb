@@ -10,12 +10,8 @@ RSpec.describe Nixshfile do
   let(:expected_contents) do
     %w[
       nix/pure/guard/run.nixsh
-      nix/pure/guard/update.nixsh
       nix/pure/rspec/run.nixsh
-      nix/pure/rspec/update.nixsh
       nix/pure/rubocop/run.nixsh
-      nix/pure/rubocop/update.nixsh
-      nix/sources.update.nixsh
     ]
   end
 
@@ -31,5 +27,25 @@ RSpec.describe Nixshfile do
 
     it { is_expected.to be_an(Array) }
     it { is_expected.to match_array(expected_contents) }
+  end
+
+  describe 'private' do
+    subject { instance.__send__(method) }
+
+    let(:expected_contents) do
+      %w[
+        nix/pure/guard/update.nixsh
+        nix/pure/rspec/update.nixsh
+        nix/pure/rubocop/update.nixsh
+        nix/sources.update.nixsh
+      ]
+    end
+
+    describe '#non_coverable' do
+      let(:method) { :non_coverable }
+
+      it { is_expected.to be_an(Array) }
+      it { is_expected.to match_array(expected_contents) }
+    end
   end
 end

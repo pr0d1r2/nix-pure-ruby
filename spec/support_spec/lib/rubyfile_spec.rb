@@ -9,20 +9,10 @@ RSpec.describe Rubyfile do
 
   let(:expected_contents) do
     %w[
-      gen/ruby_class.rb
-      gen/spec_file.rb
-      lib/guard/just/dsl.rb
-      robot/enable_rescue.rb
-      robot/reset.rb
-      spec/support/lib/cached/file.rb
-      spec/support/lib/cached/file/lines.rb
-      spec/support/lib/justfile.rb
-      spec/support/lib/port_open.rb
+      spec/support/lib/nixshfile.rb
       spec/support/lib/rubyfile.rb
-      spec/support/lib/spec_gen.rb
       spec/support/lib/spec_name.rb
       spec/support/lib/specfile.rb
-      streamline/next_commit_date_yesterday.rb
     ]
   end
 

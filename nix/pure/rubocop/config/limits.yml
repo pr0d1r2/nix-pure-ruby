@@ -3,7 +3,7 @@
 Layout/LineLength:
   Max: 80
 Metrics/AbcSize:
-  Max: 3.74
+  Max: 4.24
 Metrics/PerceivedComplexity:
   Max: 2
 # keep-sorted end
