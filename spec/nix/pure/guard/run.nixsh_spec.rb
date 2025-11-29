@@ -9,7 +9,7 @@ RSpec.describe 'nix/pure/guard/run.nixsh' do
 
   after do
     File.unlink(stdout_log)
-    File.unlink(stderr_log) unless stderr_log == "/dev/null"
+    File.unlink(stderr_log) unless stderr_log == '/dev/null'
   end
 
   let(:command_line) { "#{command} #{params} 1>#{stdout_log} 2>#{stderr_log}" }
@@ -32,7 +32,7 @@ RSpec.describe 'nix/pure/guard/run.nixsh' do
 
   it { is_expected.to eq('Guard version 2.19.1') }
 
-  describe "errors" do
+  describe 'errors' do
     subject { stderr.strip }
 
     let(:stderr) { stderr_tempfile.read }
