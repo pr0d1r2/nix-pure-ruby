@@ -22,12 +22,3 @@ Style/BlockComments:
 Style/FileNull:
   Exclude:
     - 'spec/nix/pure/guard/run.nixsh_spec.rb'
-
-# Offense count: 1
-# This cop supports unsafe autocorrection (--autocorrect-all).
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: always, always_true, never
-Style/FrozenStringLiteralComment:
-  Exclude:
-    - '**/*.arb'
-    - 'spec/spec_helper.rb'
