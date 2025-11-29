@@ -96,3 +96,10 @@ Modify `nix/pure/rspec/Gemfile` and run:
 ```zsh
 nix/pure/rspec/update.nixsh
 ```
+
+## Direnv with nix
+
+There is `.envrc` which can autoload entire environment on directory
+enter.
+As always - before allowing it to run - study underlying implementation
+with security in mind.
