@@ -1,0 +1,13 @@
+# frozen_string_literal: true
+
+source 'https://rubygems.org'
+
+ruby '3.4.7'
+
+# keep-sorted start
+gem 'rubocop-factory_bot', '~> 2.27', require: false
+gem 'rubocop-performance', '~> 1.26', require: false
+gem 'rubocop-rspec', '~> 3.7', require: false
+gem 'rubocop-rubycw', '~> 0.2.2', require: false
+gem 'rubocop-thread_safety', '~> 0.7.3', require: false
+# keep-sorted end
