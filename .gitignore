@@ -1,3 +1,5 @@
+.bundle/
 .direnv/
 tmp/
 coverage/
+vendor/
