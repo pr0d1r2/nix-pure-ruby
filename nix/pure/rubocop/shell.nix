@@ -15,6 +15,7 @@ let
   shellDeps = [
     bundix
     pkgs.bash
+    pkgs.less
     rubyEnv
     rubyEnv.wrappedRuby
   ];
