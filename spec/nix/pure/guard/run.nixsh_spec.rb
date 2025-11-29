@@ -25,7 +25,7 @@ RSpec.describe 'nix/pure/guard/run.nixsh' do
 
   let(:environment) do
     {
-      path:
+      path:,
     }.transform_keys { it.to_s.upcase }
   end
   let(:path) { '/nix/var/nix/profiles/default/bin' }

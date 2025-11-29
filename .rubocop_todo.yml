@@ -36,11 +36,3 @@ Style/FrozenStringLiteralComment:
 Style/InlineComment:
   Exclude:
     - 'spec/spec_helper.rb'
-
-# Offense count: 1
-# This cop supports safe autocorrection (--autocorrect).
-# Configuration parameters: EnforcedStyleForMultiline.
-# SupportedStylesForMultiline: comma, consistent_comma, diff_comma, no_comma
-Style/TrailingCommaInHashLiteral:
-  Exclude:
-    - 'spec/nix/pure/guard/run.nixsh_spec.rb'
