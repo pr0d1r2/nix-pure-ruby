@@ -14,6 +14,7 @@ AllCops:
   EnabledByDefault: true
   ActiveSupportExtensionsEnabled: true
   TargetRubyVersion: 3.4.7
+  DisplayStyleGuide: true
 
 plugins:
   - rubocop-factory_bot
