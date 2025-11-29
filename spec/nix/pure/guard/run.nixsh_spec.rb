@@ -9,7 +9,7 @@ RSpec.describe 'nix/pure/guard/run.nixsh' do
 
   after do
     File.unlink(stdout_log)
-    File.unlink(stderr_log) unless stderr_log == '/dev/null'
+    File.unlink(stderr_log) unless stderr_log == File::NULL
   end
 
   let(:command_line) { "#{command} #{params} 1>#{stdout_log} 2>#{stderr_log}" }
@@ -21,7 +21,7 @@ RSpec.describe 'nix/pure/guard/run.nixsh' do
   let(:stdout_log) { stdout_tempfile.path }
   let(:stdout_tempfile) { Tempfile.create }
 
-  let(:stderr_log) { '/dev/null' }
+  let(:stderr_log) { File::NULL }
 
   let(:environment) do
     {
