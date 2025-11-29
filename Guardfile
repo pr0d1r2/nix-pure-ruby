@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+ignore %r{tmp/*}
+
 group :fast_fail, halt_on_fail: true do
   guard :rubocop, YAML.load_file('nix/pure/guard/config/rubocop.yml') do
     watch(%r{.+\.rb$})
