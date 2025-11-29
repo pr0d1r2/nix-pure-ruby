@@ -23,5 +23,8 @@ group :fast_fail, halt_on_fail: true do
     # Ruby files
     ruby = dsl.ruby
     dsl.watch_spec_files_for(ruby.lib_files)
+
+    # nixsh files
+    watch(%r{(.+)\.nixsh$}) { rspec.spec.call(it[0]) }
   end
 end
