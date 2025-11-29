@@ -14,7 +14,6 @@ Run:
 nix/pure/rubocop/run.nixsh
 ```
 
-
 ### RSpec
 
 Run:
