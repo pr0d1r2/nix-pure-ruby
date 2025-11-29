@@ -1,0 +1,21 @@
+#!/usr/bin/env nix-shell
+#!nix-shell ./shell.nix --pure --no-build-output --timeout 30 --cores 0 --quiet -i bash
+
+for PARAM in $@
+do
+  case $PARAM in
+    spec | *_spec.rb)
+      TARGETS="$TARGETS $PARAM"
+      ;;
+    --version)
+      parallel_rspec $PARAM && exit 0
+      ;;
+    *)
+      ARGS="$ARGS $PARAM"
+      ;;
+  esac
+done
+
+PATH="/nix/var/nix/profiles/default/bin:bin/:$PATH"
+
+parallel_rspec -- $ARGS -- $TARGETS

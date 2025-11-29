@@ -21,6 +21,7 @@ RSpec.describe Specfile do
       spec/nix/pure/rubocop/run.nixsh_spec.rb
       spec/nix/pure/guard/run.nixsh_spec.rb
       spec/nix/pure/rspec/run.nixsh_spec.rb
+      spec/nix/pure/parallel_rspec/run.nixsh_spec.rb
       spec/standards/rspec/coverage_spec.rb
       spec/support_spec/lib/nixshfile_spec.rb
       spec/support_spec/lib/rubyfile_spec.rb

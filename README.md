@@ -61,6 +61,18 @@ Runs:
 nix/pure/rspec/run.nixsh
 ```
 
+#### Parallel RSpec
+
+```zsh
+prspec
+```
+
+Runs:
+
+```zsh
+nix/pure/parallel_rspec/run.nixsh
+```
+
 ## Updating
 
 Updateable via set of encapsulated nix [sub] shells:

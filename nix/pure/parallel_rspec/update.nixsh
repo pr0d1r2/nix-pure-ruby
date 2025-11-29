@@ -1,0 +1,12 @@
+#!/usr/bin/env nix-shell
+#!nix-shell ../bundle/shell.nix --pure --no-build-output --timeout 30 --cores 0 --quiet -i bash
+
+set -euox pipefail
+
+cd "$(dirname "$0")"
+
+bundler package --no-install --path vendor
+bundix -l
+
+rm -rf vendor
+rm -rf .bundle

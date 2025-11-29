@@ -10,6 +10,7 @@ RSpec.describe Nixshfile do
   let(:expected_contents) do
     %w[
       nix/pure/guard/run.nixsh
+      nix/pure/parallel_rspec/run.nixsh
       nix/pure/rspec/run.nixsh
       nix/pure/rubocop/run.nixsh
     ]
@@ -35,6 +36,7 @@ RSpec.describe Nixshfile do
     let(:expected_contents) do
       %w[
         nix/pure/guard/update.nixsh
+        nix/pure/parallel_rspec/update.nixsh
         nix/pure/rspec/update.nixsh
         nix/pure/rubocop/update.nixsh
         nix/sources.update.nixsh
