@@ -3,7 +3,7 @@
 require 'tempfile'
 
 RSpec.describe 'nix/pure/rspec/run.nixsh' do
-  subject { stdout.strip.split("\n") }
+  subject(:lines) { stdout.strip.split("\n") }
 
   before { system(environment, command_line) }
 
@@ -30,11 +30,13 @@ RSpec.describe 'nix/pure/rspec/run.nixsh' do
   end
   let(:path) { '/nix/var/nix/profiles/default/bin' }
 
-  it { is_expected.to include('RSpec 3.13') }
-  it { is_expected.to include('  - rspec-core 3.13.6') }
-  it { is_expected.to include('  - rspec-expectations 3.13.5') }
-  it { is_expected.to include('  - rspec-mocks 3.13.7') }
-  it { is_expected.to include('  - rspec-support 3.13.6') }
+  specify do
+    expect(lines).to include('RSpec 3.13')
+      .and include('  - rspec-core 3.13.6')
+      .and include('  - rspec-expectations 3.13.5')
+      .and include('  - rspec-mocks 3.13.7')
+      .and include('  - rspec-support 3.13.6')
+  end
 
   describe 'errors' do
     subject { stderr.strip }
